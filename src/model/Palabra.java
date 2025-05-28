@@ -25,4 +25,16 @@ public class Palabra {
     public void setDireccion(Direccion direccion) {
         this.direccion = direccion;
     }
+
+    public Object getFila() {
+        return fila;
+    }
+
+    public Object getColumna() {
+        return columna;
+    }
+
+    public Object getDireccion() {
+        return direccion;
+    }
 }

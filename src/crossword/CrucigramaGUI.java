@@ -203,7 +203,7 @@ public class CrucigramaGUI extends JFrame {
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
-            CrucigramaGUI ui = new CrucigramaGUI(15);
+            CrucigramaGUI ui = new CrucigramaGUI(1);
             ui.setVisible(true);
         });
     }

@@ -239,18 +239,6 @@ public class Crucigrama {
         palabra.setDireccion(direccion);
     }
 
-
-    public void imprimir() {
-        for (int i = 0; i < tamanio; i++) {
-            for (int j = 0; j < tamanio; j++) {
-                System.out.print(tablero[i][j] == ' ' ? '.' : tablero[i][j]);
-                System.out.print(' ');
-            }
-            System.out.println();
-        }
-    }
-
-
     private boolean puedeColocarHorizontalConEspacio(Palabra palabra, int fila, int col) {
         String texto = palabra.getTexto();
 
@@ -308,7 +296,7 @@ public class Crucigrama {
 
     private String encontrarPalabraMasCruzable(List<String> palabras) {
         int mejorPuntaje = -1;
-        String mejorPalabra = palabras.getFirst();
+        String mejorPalabra = palabras.get(0);
 
         for (String palabra : palabras) {
             int puntaje = 0;
@@ -330,15 +318,4 @@ public class Crucigrama {
 
         return mejorPalabra;
     }
-
-    public int getTamanio() { return tamanio; }
-
-    public char getLetra(int fila, int columna) {
-        return tablero[fila][columna];
-    }
-
-    public boolean esLetraVisible(int fila, int columna) {
-        return tablero[fila][columna] != ' ';
-    }
-
 }
