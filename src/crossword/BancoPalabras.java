@@ -24,7 +24,6 @@ public class BancoPalabras {
                     if (letras.contains(c)) puntaje++;
                 }
             }
-
             if (puntaje > mejorPuntaje) {
                 mejorPuntaje = puntaje;
                 mejorPalabra = palabra;
